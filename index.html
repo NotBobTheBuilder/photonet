@@ -16,8 +16,7 @@
     }
 
     #v, .preview {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
     }
 
     .taken #v {
@@ -52,11 +51,14 @@
 </head>
 <body>
   <div class="js-upload">
+    <h1>Photonet</h1>
+    <h2>Hit space or click preview to take photo</h2>
     <video id="v" width="640" height="480"></video>
     <canvas id="c" width="640" height="480"></canvas>
     <div class="preview">
       <img class="image" alt="preview">
       <span><button type="button" class="upload">Upload it</button></span>
+      <h2>Press escape to re-take</h2>
     </div>
   </div>
   <script>
