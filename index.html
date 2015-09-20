@@ -43,18 +43,22 @@
       width: 100vw;
       height: 10vw;
     }
+
+    .js-upload {
+      max-width: 800px;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
-    <div class="js-upload">
-      <video id="v" width="640" height="480"></video>
-      <canvas id="c" width="640" height="480"></canvas>
-      <div class="preview">
-        <img class="image" alt="preview">
-        <button type="button" class="upload">Upload it</button>
-      </div>
+  <div class="js-upload">
+    <video id="v" width="640" height="480"></video>
+    <canvas id="c" width="640" height="480"></canvas>
+    <div class="preview">
+      <img class="image" alt="preview">
+      <span><button type="button" class="upload">Upload it</button></span>
     </div>
-  </form>
+  </div>
   <script>
     window.fbAsyncInit = function() {
       FB.init({
