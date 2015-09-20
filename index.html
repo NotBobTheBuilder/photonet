@@ -19,7 +19,7 @@
       width: 100%;
     }
 
-    .taken #v {
+    .taken .live {
       display: none;
     }
 
@@ -52,8 +52,10 @@
 <body>
   <div class="js-upload">
     <h1>Photonet</h1>
-    <h2>Hit space or click preview to take photo</h2>
-    <video id="v" width="640" height="480"></video>
+    <div class="live">
+      <h2>Hit space or click preview to take photo</h2>
+      <video id="v" width="640" height="480"></video>
+    </div>
     <canvas id="c" width="640" height="480"></canvas>
     <div class="preview">
       <img class="image" alt="preview">
