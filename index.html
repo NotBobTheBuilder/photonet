@@ -3,64 +3,24 @@
 <head>
   <meta charset="utf-8">
   <title>Photonet</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-    }
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 
-    #c {
-      display : none;
-      width: 100vw;
-      height: 100vh;
-    }
-
-    #v, .preview {
-      width: 100%;
-    }
-
-    .taken .live {
-      display: none;
-    }
-
-    .taken .preview {
-      display: block;
-    }
-
-    .preview {
-      display: none;
-      background-repeat: no-repeat;
-    }
-
-    .preview .image {
-      max-width: 100vw;
-      max-height: 90vw;
-    }
-
-    .preview button {
-      box-sizing: border-box;
-      width: 100%;
-      height: 10vw;
-    }
-
-    .js-upload {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-  </style>
 </head>
 <body>
-  <div class="js-upload">
+  <div class="container js-upload">
     <h1>Photonet</h1>
-    <div class="live">
+    <div class="live picture">
       <h2>Hit space or click preview to take photo</h2>
       <video id="v" width="640" height="480"></video>
     </div>
     <canvas id="c" width="640" height="480"></canvas>
-    <div class="preview">
-      <img class="image" alt="preview">
-      <span><button type="button" class="upload">Upload it</button></span>
+    <div class="preview picture">
       <h2>Press escape to re-take</h2>
+      <img class="image" alt="preview">
+      <div><button class="btn btn-lg-primary" type="button" class="upload">Upload it</button></div>
+      
     </div>
   </div>
   <script>
@@ -154,7 +114,6 @@
       }
       return array;
     }
-
   </script>
   <script>
     var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
